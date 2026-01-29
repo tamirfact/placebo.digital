@@ -1,77 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="placebo.digital - A cutting-edge design studio crafting digital experiences that matter. Coming soon.">
-    <meta name="keywords" content="design studio, digital design, web design, branding, creative agency">
-    <meta name="author" content="placebo.digital">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://placebo.digital/">
-    <meta property="og:title" content="placebo.digital - Design Studio">
-    <meta property="og:description" content="A cutting-edge design studio crafting digital experiences that matter. Coming soon.">
-    <meta property="og:image" content="https://placebo.digital/og-image.jpg">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://placebo.digital/">
-    <meta property="twitter:title" content="placebo.digital - Design Studio">
-    <meta property="twitter:description" content="A cutting-edge design studio crafting digital experiences that matter. Coming soon.">
-    <meta property="twitter:image" content="https://placebo.digital/og-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <title>placebo.digital - Design Studio | Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Placebo Digital | Design Studio for Complex Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["DM Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .mono-label { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem; }
+        .grid-line-x { border-bottom: 1px solid #e2e8f0; }
+        .dark .grid-line-x { border-bottom: 1px solid #1e293b; }
+        .grid-line-y { border-right: 1px solid #e2e8f0; }
+        .dark .grid-line-y { border-right: 1px solid #1e293b; }
+    </style>
 </head>
-<body>
-    <div class="background-animation">
-        <div class="bg-image-container">
-            <img src="bg.webp" alt="Background" class="bg-image">
-            <div class="motion-blur-overlay"></div>
-        </div>
-    </div>
-
-    <main class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="logo.png" alt="placebo.digital" width="111" height="100" class="logo-image">
-            </div>
-        </header>
-
-        <section class="hero">
-            <div class="hero-content">
-                <div class="tagline">TEL AVIV X AMSTERDAM</div>
-                <h1 class="hero-title">
-                    <span class="title-line">We Build Digital</span>
-                    <span class="title-line">Brands and</span>
-                    <span class="title-line">Products</span>
-                </h1>
-                <p class="hero-subtitle">
-                    A Tel Aviv / Amsterdam based digital design and technology studio working with cybersecurity companies from ideation to execution.
-                </p>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="footer-text">© 2025 placebo.digital. All rights reserved.</p>
-            </div>
-        </footer>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html> 
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-1">
+<div class="text-primary">
+<img src="logo.svg" alt="Placebo Digital Logo" class="size-6" />
+</div>
+<h2 class="text-lg tracking-tighter ">placebo digital</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="mono-label hover:text-primary transition-colors" href="#work">Work</a>
+<a class="mono-label hover:text-primary transition-colors" href="#process">Process</a>
+<a class="mono-label hover:text-primary transition-colors" href="#contact">Contact</a>
+<button class="bg-primary text-white px-5 py-2 rounded font-bold text-sm uppercase tracking-wider hover:bg-blue-700 transition-all">
+                    Get in touch
+                </button>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6">
+<!-- HeroSection -->
+<section class="py-20 md:py-32 border-x border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center px-8">
+<div class="lg:col-span-7 flex flex-col gap-8">
+<span class="mono-label text-primary font-bold">[ Index // 2026 ]</span>
+<h1 class="text-5xl md:text-7xl lg:text-8xl leading-[0.8] tracking-tighter text-slate-900 dark:text-white">
+                        A design studio for complex things.
+                    </h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl font-medium leading-relaxed">
+                        Designing clarity for the world's most intricate systems. Structure over decoration. Logic over trends.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-opacity">
+                            View our work
+                        </button>
+<button class="border border-slate-300 dark:border-slate-700 px-8 py-4 rounded font-bold uppercase tracking-widest text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            Our Process
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-slate-200 dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700 relative group" data-alt="Abstract minimalist architectural geometry with harsh shadows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWSPZXY9c3pO5J4SfE2tHa6m1-pUscI1l6LrDDIt3w8PcyXz7TPd3rjV5R520LTS6MXNO2DwR0ujInvIamNnjtMH57sZqtFi__qyDg7GUh9ZD2EDo8fVNkObvXwqtwHSo60h-c6b4vV1kKwffB3l_2mLOI1ba2uYHzjQ9q6ACcT4iDhyay0s9NL9bbjDWIXuccHK_763XmwWtO4AQnAPHnVsgQyOXzkhyFcRmiIlhUhqaxkKjMXfZgylOfqiq9r_NnC6Aqu1xwAIRJ"); background-size: cover; background-position: center;'>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply group-hover:bg-transparent transition-all duration-500"></div>
+<div class="absolute bottom-4 left-4 mono-label bg-white/90 dark:bg-slate-900/90 p-2 backdrop-blur">
+                            FIG_01: System Mapping
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SectionHeader: What we do -->
+<div class="border-x border-t border-slate-200 dark:border-slate-800 px-8 pt-20 pb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="mono-label text-primary font-bold">Services</span>
+<h2 class="text-4xl font-black tracking-tight mt-2 uppercase">What we do</h2>
+</div>
+<p class="mono-label text-slate-400">04 Services / Global Reach</p>
+</div>
+</div>
+<!-- TextGrid -->
+<section class="border-x border-y border-slate-200 dark:border-slate-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-slate-800">
+<div class="p-8 flex flex-col gap-6 hover:bg-white dark:hover:bg-slate-900 transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">settings_overscan</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="mono-label text-slate-400">01. Enterprise</span>
+<h3 class="text-xl font-bold leading-tight">UI/UX for Enterprise</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Simplifying complex workflows for high-stakes environments where precision is non-negotiable.</p>
+</div>
+</div>
+<div class="p-8 flex flex-col gap-6 hover:bg-white dark:hover:bg-slate-900 transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="mono-label text-slate-400">02. Logic</span>
+<h3 class="text-xl font-bold leading-tight">System Architecture</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Building the foundational logic for scalable digital products that evolve with your organization.</p>
+</div>
+</div>
+<div class="p-8 flex flex-col gap-6 hover:bg-white dark:hover:bg-slate-900 transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="mono-label text-slate-400">03. Insight</span>
+<h3 class="text-xl font-bold leading-tight">Data Visualization</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Turning dense, high-frequency datasets into actionable visual insights for rapid decision making.</p>
+</div>
+</div>
+<div class="p-8 flex flex-col gap-6 hover:bg-white dark:hover:bg-slate-900 transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">grid_view</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="mono-label text-slate-400">04. Cohesion</span>
+<h3 class="text-xl font-bold leading-tight">Design Systems</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Creating cohesive, governed visual languages for complex organizations across platforms.</p>
+</div>
+</div>
+</section>
+<!-- SectionHeader: What we believe -->
+<section class="py-32 border-x border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30">
+<div class="max-w-4xl mx-auto px-8 text-center flex flex-col items-center">
+<span class="mono-label text-primary font-bold mb-8 uppercase">[ Our Philosophy ]</span>
+<div class="flex flex-col gap-10">
+<h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+                        Structure over decoration. Logic over trends. Clarity over noise.
+                    </h2>
+<div class="h-px w-24 bg-primary mx-auto"></div>
+<p class="text-xl text-slate-500 max-w-2xl mx-auto">
+                        We don't just design interfaces; we engineer understanding. Our work is rooted in information theory and cognitive psychology.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Contact Section / Footer -->
+<footer class="border-x border-t border-slate-200 dark:border-slate-800 mt-20">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 md:p-20 border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800">
+<h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-8">Ready for<br/>Clarity?</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-sm font-medium">
+                        Tell us about your complex system. We’ll help you find the logic within the chaos.
+                    </p>
+<button class="bg-primary text-white px-10 py-5 rounded font-bold uppercase tracking-widest text-sm hover:shadow-xl transition-all">
+                        Start a Project
+                    </button>
+</div>
+<div class="flex flex-col">
+<div class="p-12 border-b border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-8">
+<div>
+<span class="mono-label text-slate-400 block mb-4 underline">Socials</span>
+<ul class="flex flex-col gap-2 font-bold uppercase text-sm tracking-tight">
+<li><a class="hover:text-primary" href="#">LinkedIn</a></li>
+<li><a class="hover:text-primary" href="#">Twitter / X</a></li>
+<li><a class="hover:text-primary" href="#">Dribbble</a></li>
+<li><a class="hover:text-primary" href="#">Instagram</a></li>
+</ul>
+</div>
+<div>
+<span class="mono-label text-slate-400 block mb-4 underline">Office</span>
+                            <address class="not-italic text-sm font-bold uppercase leading-relaxed">
+                                1245 Studio Row<br/>
+                                Floor 4, Suite 8<br/>
+                                Tel Aviv, Israel
+                            </address>
+</div>
+</div>
+<div class="p-12 flex-grow flex items-end justify-between">
+<div>
+<h3 class="mono-label text-xs">© 2026 Placebo Digital Ltd.</h3>
+</div>
+<div class="flex gap-4">
+<span class="mono-label text-[10px] text-slate-400">44.312° N, 12.332° E</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<div class="fixed bottom-6 right-6 z-50">
+<button class="size-12 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-lg" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+</div>
+</body></html>
